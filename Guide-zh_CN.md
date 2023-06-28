@@ -162,3 +162,6 @@ const state = reactive({
 ```
 
 值得说明的是，我们不必先引入组件再使用组件，也不必先引入Vue3 API再使用API，因为这一切都由 `unplugin-vue-components` 和 `unplugin-auto-import` 帮我们做好了。
+
+## git提交规范
+https://segmentfault.com/a/1190000041878613
