@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import { queryProse } from '@/api'
+// import userApi from '@/api/index'
 
 const messages = ref<string>('')
 
-const pull = () => {
-  queryProse().then((res) => {
-    messages.value = res.prose
-  })
+const pull = async () => {
+  // const res = await userApi.getHome({});
 }
 
 // reset data
