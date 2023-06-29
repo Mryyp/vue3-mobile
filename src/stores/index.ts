@@ -7,4 +7,15 @@ export const useStore = defineStore({
     // light || dark
     mode: '',
   }),
+  getters: {
+    /**
+     * 获取本地资源图片地址路径
+     * @param url 地址
+     */
+    getImage: () => (url: string) => {
+      if (!url)
+        return ''
+      return new URL(`../assets/${url}`, import.meta.url).href
+    },
+  },
 })
