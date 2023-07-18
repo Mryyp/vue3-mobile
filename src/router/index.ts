@@ -3,10 +3,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
-// 导入路由组件
-import mian from '@/views/index.vue'
-import mock from '@/views/mock/index.vue'
-import charts from '@/views/charts/index.vue'
 NProgress.configure({ showSpinner: true, parent: '#app' })
 
 // 定义路由，每个路由都需要映射到一个组件
@@ -14,17 +10,17 @@ const routes = [
   {
     path: '/',
     name: 'main',
-    component: mian,
+    component: () => import('@/views/index.vue'),
   },
   {
     path: '/mock',
     name: 'mock',
-    component: mock,
+    component: () => import('@/views/mock/index.vue'),
   },
   {
     path: '/charts',
     name: 'charts',
-    component: charts,
+    component: () => import('@/views/charts/index.vue'),
   },
 ]
 
